@@ -16,19 +16,23 @@
 
     * { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      min-height: 100svh;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      padding: 22px;
-      font-family: "Trebuchet MS", Arial, sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, #fffaff 0, transparent 40%),
-        linear-gradient(135deg, #f8f1ff, #e9dcff 55%, #f4eaff);
+   
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 22px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, #fffaff 0, transparent 40%),
+    linear-gradient(135deg, #f8f1ff, #e9dcff 55%, #f4eaff);
+}
+
     }
 
     .falling-layer {
