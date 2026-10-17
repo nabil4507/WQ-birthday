@@ -60,7 +60,10 @@
     }
 
     .gift-card {
-      position: relative;
+      /* Pin the card to the exact center of the browser viewport. */
+      position: fixed;
+      top: 50%;
+      left: 50%;
       z-index: 1;
       width: min(100%, 540px);
       min-height: 540px;
@@ -74,9 +77,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      transform: translateY(10px);
-}
-
+      margin: 0;
+      transform: translate(-50%, -50%);
     }
 
     .ribbon { font-size: 2rem; margin-bottom: 8px; }
@@ -231,8 +233,26 @@
     }
 
     @media (max-height: 700px) {
-      body { overflow-y: auto; }
-      .gift-card { min-height: 540px; }
+      body {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .gift-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 22px auto;
+        min-height: 540px;
+        flex-shrink: 0;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
